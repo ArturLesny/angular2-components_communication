@@ -1,4 +1,4 @@
-# Angular2IoComponent
+# Angular2IO_Components
 
 Przykład komunikacji pomiędzy komponentami (@Input / @Output).
 
