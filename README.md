@@ -1,4 +1,6 @@
-# Angular2TestIoComponent
+# Angular2IoComponent
+
+Przykład komunikacji pomiędzy komponentami (@Input / @Output).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
