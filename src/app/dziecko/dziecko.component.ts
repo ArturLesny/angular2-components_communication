@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output, OnInit, DoCheck} from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-dziecko',
