@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 
 import { RodzicComponent } from './rodzic.component';
 
@@ -8,7 +10,9 @@ describe('RodzicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RodzicComponent ]
+      declarations: [ RodzicComponent ],
+      imports: [ FormsModule ],
+      schemas:  [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));

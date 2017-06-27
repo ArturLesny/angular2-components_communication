@@ -1,13 +1,19 @@
 import { TestBed, async } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
+import { RodzicComponent } from './rodzic/rodzic.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        RodzicComponent,
       ],
+      imports: [ FormsModule ],
+      schemas:  [ CUSTOM_ELEMENTS_SCHEMA ]
     }).compileComponents();
   }));
 
