@@ -5,7 +5,7 @@
   rodzic works!
 </p>
 <div>
-  <input type="text" [(ngModel)]="nazwa_rodzic">
+  <input type="text" [(ngModel)]="nazwa_rodzic" name="pole_do_wpisania">
 </div>
 <div>
   <app-dziecko [nazwa_dziecko]="nazwa_rodzic" (change_nazwa)="updateNazwa($event)"></app-dziecko>

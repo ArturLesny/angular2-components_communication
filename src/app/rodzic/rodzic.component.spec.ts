@@ -12,7 +12,7 @@ describe('RodzicComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ RodzicComponent ],
       imports: [ FormsModule ],
-      schemas:  [ CUSTOM_ELEMENTS_SCHEMA ]
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
@@ -25,5 +25,29 @@ describe('RodzicComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+
+  describe('Pole input', () => {
+    let inputElement: HTMLInputElement;
+
+    beforeEach(() => {
+      inputElement = fixture.nativeElement.querySelector('input[name=pole_do_wpisania]');
+    });
+
+    it('sprawdza czy zmiana w polu input jest zachowywana w zmiennej "nazwa_rodzic"', done => {
+      sendInput('Ktoś inny').then(() => {
+        fixture.detectChanges();
+        expect(component.nazwa_rodzic).toEqual('Ktoś inny');
+        done();
+      });
+    });
+
+    function sendInput(text: string) {
+      inputElement.value = text;
+      inputElement.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+      return fixture.whenStable();
+    }
   });
 });
